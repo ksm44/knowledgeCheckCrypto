@@ -1,5 +1,7 @@
 # Checking knowledge of the rules for working with cryptographic information protection tools (проверка знаний правил работы со средствами криптографической защиты информации)
 
+![alt-текст](https://skzi.000webhostapp.com/img/educationBg.jpg "Learning")
+
 This repository was created remotely with terminal Visual Studio Code. The repository required for project about knowledge check work with cryptography protection tool.
 
 * Реализована форма для начала прохождения теста
