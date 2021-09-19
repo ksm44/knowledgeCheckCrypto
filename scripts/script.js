@@ -60,7 +60,6 @@ function startTest() {
 
     const x = document.getElementsByClassName('overlay')[0];
     x.style.display = "block";
-    x.style['background-color'] = "white";
 
 }
 
@@ -75,10 +74,10 @@ function empty_result() {
     };
     const z = document.getElementsByClassName('results')[0];
     z.style.display = "block";
-    
+
     const w = document.getElementsByClassName('overlay')[0];
     w.style.display = "none";
-    
+
 };
 
 function JSClock(time) {
@@ -100,34 +99,34 @@ $(function() {
         $.ajax({
             type: 'POST',
             url: 'sendResult.php',
-            data: { fio: document.getElementById('fio').value,
-            org: document.getElementById('org').value,
-            email: document.getElementById('email').value,
-            endresult: document.getElementById('endResult').value,
-            timeResolve: document.getElementById('timeResolve').value
+            data: {
+                fio: document.getElementById('fio').value,
+                org: document.getElementById('org').value,
+                email: document.getElementById('email').value,
+                endresult: document.getElementById('endResult').value,
+                timeResolve: document.getElementById('timeResolve').value
             },
-            success: function(data){
-        },
-            error: function (jqXHR, exception) {
-        if (jqXHR.status === 0) {
-            console.log('Not connect. Verify Network.');
-        } else if (jqXHR.status == 404) {
-            console.log('Requested page not found (404).');
-        } else if (jqXHR.status == 500) {
-            console.log('Internal Server Error (500).');
-        } else if (exception === 'parsererror') {
-            console.log('Requested JSON parse failed.');
-        } else if (exception === 'timeout') {
-            console.log('Time out error.');
-        } else if (exception === 'abort') {
-            console.log('Ajax request aborted.');
-        } else {
-            console.log('Uncaught Error. ' + jqXHR.responseText);
-        }
-    }
+            success: function(data) {},
+            error: function(jqXHR, exception) {
+                if (jqXHR.status === 0) {
+                    console.log('Not connect. Verify Network.');
+                } else if (jqXHR.status == 404) {
+                    console.log('Requested page not found (404).');
+                } else if (jqXHR.status == 500) {
+                    console.log('Internal Server Error (500).');
+                } else if (exception === 'parsererror') {
+                    console.log('Requested JSON parse failed.');
+                } else if (exception === 'timeout') {
+                    console.log('Time out error.');
+                } else if (exception === 'abort') {
+                    console.log('Ajax request aborted.');
+                } else {
+                    console.log('Uncaught Error. ' + jqXHR.responseText);
+                }
+            }
         });
         return false;
-    }); 
+    });
 })
 
 function result() {
@@ -140,9 +139,7 @@ function result() {
     var a = document.getElementsByTagName('input');
     for (var i = 0; i < a.length; i++) {
         if ((a[i].type == 'checkbox' || a[i].type == 'radio') && a[i].checked) {
-
             flagChecked = true;
-
             switch (a[i].id) {
                 case "question1_2":
                     addC();
