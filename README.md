@@ -1,5 +1,5 @@
 # Checking knowledge of the rules for working with cryptographic information protection tools (проверка знаний правил работы со средствами криптографической защиты информации)
-
+Рабочий результат: **[см. Демо (Тест знаний правил работы со сдедствами криптографической защиты информации)](https://skzi.000webhostapp.com/)**
 <p align="center">
 <img src="https://skzi.000webhostapp.com/img/educationBg.jpg" width="650">
 </p>
@@ -13,7 +13,7 @@ This repository was created remotely with terminal Visual Studio Code. The repos
 * Подготовлены JS-скрипты для сбора и предоставления данных
 * Подготовлены php-скрипты для занесения результатов в базу данных и выгрузки из неё в таблицу
 
-
+----
 
 Add possibility to view the results of the passed tests in the format: 
 (добавлена возможность просмотра результатов пройденных тестов в формате):
@@ -24,6 +24,3 @@ Add possibility to view the results of the passed tests in the format:
 |      3        | Иванов Петр Иванович |   Pine inc. | 00:01:01 | 2021-09-17 |   18  |
 |      4        | Иванов Иван Петрович |   ИП "А1"   | 00:02:45 | 2021-09-16 |   17  |
 
-----
-
-Рабочий результат: **[см. Демо Тест знаний СКЗИ](https://skzi.000webhostapp.com/)**
