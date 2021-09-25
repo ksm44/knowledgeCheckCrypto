@@ -61,6 +61,17 @@ function startTest() {
     const x = document.getElementsByClassName('overlay')[0];
     x.style.display = "block";
 
+    const w = document.getElementsByClassName('block')[0];
+    w.style.display = "none";
+
+    const q = document.getElementsByClassName('block')[1];
+    q.style.display = "none";
+
+    const r = document.getElementById('imgs');
+    r.style.display = "none";
+
+
+
 }
 
 function addC() {
