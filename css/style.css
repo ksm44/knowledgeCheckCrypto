@@ -113,3 +113,100 @@ th.sorted[data-order="-1"]::after {
 th.sorted[data-order="1"]::after {
     content: "▲"
 }
+
+.block {
+    margin: 15px;
+    text-align: justify;
+    font-size: 14px;
+    background: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: rgb(107, 107, 107);
+}
+
+.docs {
+    display: flex;
+    flex-direction: column;
+}
+
+.docs li {
+    text-align: start;
+    list-style-type: decimal;
+}
+
+.block a {
+    color: #3498bd;
+}
+
+.block a:hover {
+    color: #00bafd;
+}
+
+.docs li:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+.notice {
+    color: rgb(0, 196, 0);
+}
+
+.stepsBlock {
+    max-width: 450px;
+}
+
+.steps {
+    max-width: 430px;
+}
+
+#imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#imgs img {
+    width: 150px;
+}
+
+.answr {
+    background: white;
+    padding: 15px;
+}
+
+.block ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.block ul li {
+    list-style-type: disc;
+    text-align: justify;
+}
+
+@media (max-width: 935px) {
+    .form__line {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .steps {
+        max-width: 300px;
+    }
+    .form__line input {
+        width: 250px;
+    }
+    #startBtn {
+        width: 258px;
+    }
+    .navigations {
+        margin-top: 10px;
+    }
+    #imgs div img {
+        width: 100px;
+    }
+    nav.navBlock li {
+        max-width: 120px;
+    }
+}
