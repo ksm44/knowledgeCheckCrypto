@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/css/style_skzi.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/scripts/async.js"></script>
+    <script defer src="/scripts/async.js"></script>
     <script defer src="./scripts/script.js"></script>
-    <script src="./scripts/jquery-3.6.0.min.js"></script>
+    <script defer src="./scripts/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
     <title>Тест знаний</title>
 </head>
 
 <body>
+
     <div class="wrapper">
         <div class="content">
             <header>
@@ -23,333 +24,339 @@
                     <nav class="navBlock">
                         <ul>
                             <li><a href="https://skzi.000webhostapp.com/docs.html">Нормативные документы</a></li>
-                            <li><a href="#">СКЗИ</a></li>
-                            <li><a href="#">Термины</a></li>
+                            <li><a href="https://skzi.000webhostapp.com/skzi.html">СКЗИ</a></li>
+                            <li><a href="https://skzi.000webhostapp.com/terms.html">Термины</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
-            <div class="startBlock">
+            <section>
+                <h1>Тестирование знаний правил пользования СКЗИ</h1>
+                <div class="startBlock">
 
-                <div class="form">
+                    <div class="form">
 
-                    <div class="form__line">
-                        <div class="label">ФИО:</div>
-                        <div class="inputField"><input placeholder="Например: Иванов Иван Иванович" required id="fio2"></div>
+                        <div class="form__line">
+                            <div class="label">ФИО:</div>
+                            <div class="inputField"><input placeholder="Например: Иванов Иван Иванович" required id="fio2"></div>
+                        </div>
+                        <div class="form__line">
+                            <div class="label">Организация:</div>
+                            <div class="inputField"><input placeholder="Например: ООО 'Компания'" required id="org2"></div>
+                        </div>
+                        <div class="form__line">
+                            <div class="label">E-mail:</div>
+                            <div class="inputField"><input placeholder="Например: email@mail.ru" required id="email2"></div>
+                        </div>
+                        <div class="form__line">
+                            <input id="startBtn" type="button" value="Начать тестирование" onClick="startTest()">
+                        </div>
                     </div>
-                    <div class="form__line">
-                        <div class="label">Организация:</div>
-                        <div class="inputField"><input placeholder="Например: ООО 'Компания'" required id="org2"></div>
-                    </div>
-                    <div class="form__line">
-                        <div class="label">E-mail:</div>
-                        <div class="inputField"><input placeholder="Например: example@mail.ru" required id="email2"></div>
-                    </div>
-                    <div class="form__line">
-                        <input id="startBtn" type="button" value="Начать тестирование" onClick="startTest()">
-                    </div>
+                    <div class="stepsBlock"><img class="steps" src="./img/steps.png" alt="Шаги"></div>
                 </div>
-                <div class="stepsBlock"><img class="steps" src="./img/steps.png" alt="Шаги"></div>
-            </div>
-            <div class="block">
-                <p>Из пункта 21
-                    <a href="http://www.consultant.ru/document/cons_doc_LAW_32924/3740b9c793c44c4803b2bb53e14ee65fd99f0948/">Приказа ФАПСИ от 13 июня 2001 г. N 152 "Об утверждении Инструкции об организации и обеспечении безопасности хранения, обработки и передачи по каналам связи с использованием средств криптографической защиты информации с ограниченным
+                <div class="block">
+                    <p>Из пункта 21
+                        <a href="http://www.consultant.ru/document/cons_doc_LAW_32924/3740b9c793c44c4803b2bb53e14ee65fd99f0948/">Приказа ФАПСИ от 13 июня 2001 г. N 152 "Об утверждении Инструкции об организации и обеспечении безопасности хранения, обработки и передачи по каналам связи с использованием средств криптографической защиты информации с ограниченным
                         доступом, не содержащей сведений, составляющих государственную тайну"</a>:</p>
-                <p>"Непосредственно к работе с СКЗИ пользователи допускаются только после соответствующего обучения.</p>
-                <p>Обучение пользователей правилам работы с СКЗИ осуществляют сотрудники соответствующего органа криптографической защиты. Документом, подтверждающим должную специальную подготовку пользователей и возможность их допуска к самостоятельной
-                    работе с СКЗИ, является заключение, составленное комиссией соответствующего органа криптографической защиты на основании принятых от этих лиц зачетов по программе обучения."</p>
-            </div>
+                    <p>"Непосредственно к работе с СКЗИ пользователи допускаются только после соответствующего обучения.</p>
+                    <p>Обучение пользователей правилам работы с СКЗИ осуществляют сотрудники соответствующего органа криптографической защиты. Документом, подтверждающим должную специальную подготовку пользователей и возможность их допуска к самостоятельной
+                        работе с СКЗИ, является заключение, составленное комиссией соответствующего органа криптографической защиты на основании принятых от этих лиц зачетов по программе обучения."</p>
+                </div>
 
-            <div class="block">
-                <p>Пользователь СКЗИ в соответствии с Инструкцией при использовании СКЗИ обязуется:</p>
-                <ul>
-                    <li>
-                        не разглашать конфиденциальную информацию, к которой допущен, рубежи ее защиты, в том числе, сведения о криптоключах;
-                    </li>
-                    <li>
-                        соблюдать требования к обеспечению безопасности конфиденциальной информации с использованием СКЗИ;
-                    </li>
-                    <li>
-                        сообщать в орган криптографической защиты о ставших ему известными попытках посторонних лиц получить сведения об используемых СКЗИ или ключевых документах к ним;
-                    </li>
-                    <li>
-                        сдать СКЗИ, эксплуатационную и техническую документацию к ним, ключевые документы в соответствии с установленным порядком при увольнении или отстранении от обязанностей, связанных с использованием СКЗИ;
-                    </li>
-                    <li>
-                        немедленно уведомлять орган криптографической защиты о фактах утраты или недостачи СКЗИ, ключевых документов к ним, ключей от помещений, хранилищ (сейфов), личных печатей и о других фактах, которые могут привести к разглашению защищаемых сведений конфиденциального
-                        характера, а также о причинах и условиях возможной утечки таких сведений.
-                    </li>
-                </ul>
-                <p>При успешном прохождении тестирования <span class="notice">(при правильном ответе на более чем 80% вопросов)</span> будет сформировано "Заключение о допуске пользователя к самостоятельной работе с СКЗИ", которое будет доступно для печати.</p>
-            </div>
+                <div class="block">
+                    <p>Пользователь СКЗИ в соответствии с Инструкцией при использовании СКЗИ обязуется:</p>
+                    <ul>
+                        <li>
+                            не разглашать конфиденциальную информацию, к которой допущен, рубежи ее защиты, в том числе, сведения о криптоключах;
+                        </li>
+                        <li>
+                            соблюдать требования к обеспечению безопасности конфиденциальной информации с использованием СКЗИ;
+                        </li>
+                        <li>
+                            сообщать в орган криптографической защиты о ставших ему известными попытках посторонних лиц получить сведения об используемых СКЗИ или ключевых документах к ним;
+                        </li>
+                        <li>
+                            сдать СКЗИ, эксплуатационную и техническую документацию к ним, ключевые документы в соответствии с установленным порядком при увольнении или отстранении от обязанностей, связанных с использованием СКЗИ;
+                        </li>
+                        <li>
+                            немедленно уведомлять орган криптографической защиты о фактах утраты или недостачи СКЗИ, ключевых документов к ним, ключей от помещений, хранилищ (сейфов), личных печатей и о других фактах, которые могут привести к разглашению защищаемых сведений конфиденциального
+                            характера, а также о причинах и условиях возможной утечки таких сведений.
+                        </li>
+                    </ul>
+                    <p>При успешном прохождении тестирования <span class="notice">(при правильном ответе на более чем 80% вопросов)</span> будет сформировано "Заключение о допуске пользователя к самостоятельной работе с СКЗИ", которое будет доступно для
+                        печати.
+                    </p>
+                </div>
 
-            <div id="imgs">
-                <div><img src="./img/ds.png" alt="Электронная подпись"></div>
-                <div><img src="./img/cryptoGate.png" alt="Крипто-шлюз"></div>
-                <div><img src="./img/cryptoInfo.png" alt="Шифрование документа"></div>
-            </div>
+                <div id="imgs">
+                    <div><img src="./img/ds.png" alt="Электронная подпись"></div>
+                    <div><img src="./img/cryptoGate.png" alt="Крипто-шлюз"></div>
+                    <div><img src="./img/cryptoInfo.png" alt="Шифрование документа"></div>
+                </div>
 
 
-            <div class="overlay">
+                <div class="overlay">
 
-                <div class="timer">00:00:00</div>
+                    <div class="timer">00:00:00</div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №1 Что входит в обязанности пользователей СКЗИ?</span>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №1 Что входит в обязанности пользователей СКЗИ?</span>
+                        </div>
+                        <div class="qmn_check_answers mlwRequiredCheck answr">
+                            <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_1"> <label for="question1_1">Сохранять носители ключевой информации и другие документы о ключах, выдаваемых с ключевыми носителями</label></div>
+                            <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_2"> <label for="question1_2">Все ответы верны</label></div>
+                            <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_3"> <label for="question1_3">Соблюдать требования к обеспечению с использованием СКЗИ безопасности информации ограниченного доступа</label></div>
+                            <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_4">
+                                <label for="question1_4">Сообщать в ОКЗ о ставших им известными попытках посторонних лиц получить сведения об используемых СКЗИ или ключевых документах к ним</label>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="qmn_check_answers mlwRequiredCheck answr">
-                        <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_1"> <label for="question1_1">Сохранять носители ключевой информации и другие документы о ключах, выдаваемых с ключевыми носителями</label></div>
-                        <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_2"> <label for="question1_2">Все ответы верны</label></div>
-                        <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_3"> <label for="question1_3">Соблюдать требования к обеспечению с использованием СКЗИ безопасности информации ограниченного доступа</label></div>
-                        <div class="qsm_check_answer"><input type="radio" class="qmn_quiz_radio" name="question1" id="question1_4">
-                            <label for="question1_4">Сообщать в ОКЗ о ставших им известными попытках посторонних лиц получить сведения об используемых СКЗИ или ключевых документах к ним</label>
+
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №2 В каком случае сертификат ключа проверки электронной подписи прекращает свое действие?</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question2-В случае прекращения деятельности удостоверяющего центра без перехода его функций другим лицам"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_1" value="В случае прекращения деятельности удостоверяющего центра без перехода его функций другим лицам"> <label for="question2_1">В случае прекращения деятельности удостоверяющего центра без перехода его функций другим лицам</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question2-В связи с истечением установленного срока его действия"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_2" value="В связи с истечением установленного срока его действия"> <label for="question2_2">В связи с истечением установленного срока его действия</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question2-Все ответы верны"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_3" value="Все ответы верны"> <label for="question2_3">Все ответы верны</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question2-На основании заявления владельца сертификата ключа проверки электронной подписи, подаваемого в форме документа на бумажном носителе или в форме электронного документа"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_4" value="На основании заявления владельца сертификата ключа проверки электронной подписи, подаваемого в форме документа на бумажном носителе или в форме электронного документа">
+                                <label for="question2_4">На основании заявления владельца сертификата ключа проверки электронной подписи, подаваемого в форме документа на бумажном носителе или в форме электронного документа</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №3 На время отсутствия пользователей СКЗИ должны:</span>
+                        </div>
+                        <div class="qmn_check_answers mlwRequiredCheck answr">
+                            <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_1" value="Быть очищены путём форматирования ключевых носителей и удалением программных средств"> <label for="question3_1">Быть очищены путём форматирования ключевых носителей и удалением программных средств</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_2" value="Нет правильного ответа"> <label for="question3_2">Нет правильного ответа</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_3" value="Быть не активны. Компьютер должен быть выключен, двери и окна в помещение с СКЗИ должны быть закрыты. Посторонние лица должны выйти из помещения."> <label for="question3_3">Быть не активны. Компьютер должен быть выключен, двери и окна в помещение с СКЗИ должны быть закрыты. Посторонние лица должны выйти из помещения.</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_4" value="При наличии технической возможности быть выключены, отключены от линии связи и убраны в опечатываемые хранилища"> <label for="question3_4">При наличии технической возможности быть выключены, отключены от линии связи и убраны в опечатываемые хранилища</label></div>
+                        </div>
+
+                    </div>
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №4 Какие действия необходимо провести с криптоключами, в отношении которых возникло подозрение в компрометации?</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question4-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_1" value="Нет правильного ответа"> <label for="question4_1">Нет правильного ответа</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question4-Необходимо немедленно вывести из действия"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_2" value="Необходимо немедленно вывести из действия"> <label for="question4_2">Необходимо немедленно вывести из действия</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question4-Сообщить в соответствующий орган криптографической защиты"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_3" value="Сообщить в соответствующий орган криптографической защиты"> <label for="question4_3">Сообщить в соответствующий орган криптографической защиты</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question4-Необходимо сделать все перечисленные варианты"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_4" value="Необходимо сделать все перечисленные варианты"> <label for="question4_4">Необходимо сделать все перечисленные варианты</label></div>
+                        </div>
+
+                    </div>
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №5 Под компрометацией криптоключей понимается:</span>
+                        </div>
+                        <div class="qmn_check_answers mlwRequiredCheck answr">
+                            <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_1" value="Хищение, утрата, разглашение, а также несанкционированное копирование"> <label for="question5_1">Хищение, утрата, разглашение, а также несанкционированное копирование</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_2" value="Хищение, утрата, разглашение"> <label for="question5_2">Хищение, утрата, разглашение</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_3" value="Несанкционированное копирование"> <label for="question5_3">Несанкционированное копирование</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_4" value="Нет правильного ответа"> <label for="question5_4">Нет правильного ответа</label></div>
+                        </div>
+
+                    </div>
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №6 Что не допускается пользователю СКЗИ?</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question6-Выводить ключевую информацию на дисплей и(или) принтер"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_1" value="Выводить ключевую информацию на дисплей и(или) принтер"> <label for="question6_1">Выводить ключевую информацию на дисплей и(или) принтер</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question6-Все ответы верны"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_2" value="Все ответы верны"> <label for="question6_2">Все ответы верны</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question6-Записывать на ключевом носителе постороннюю информацию"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_3" value="Записывать на ключевом носителе постороннюю информацию"> <label for="question6_3">Записывать на ключевом носителе постороннюю информацию</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question6-Разглашать информацию ограниченного доступа, к которой был допущен"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_4" value="Разглашать информацию ограниченного доступа, к которой был допущен"> <label for="question6_4" title="Взлом информации, зашифрованной 2048-битным ключом, на обычном компьютере занимает всего каких-то 300 трлн лет.&#013;Но квантовому компьютеру, работающему на 4099 кубитах, потребуется для этого 10 секунд">Разглашать информацию ограниченного доступа, к которой был допущен</label></div>
+                        </div>
+
+                    </div>
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №7 Что относится к обязанностям пользователя СКЗИ?</span>
+                        </div>
+                        <div class="qmn_check_answers mlwRequiredCheck answr">
+                            <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_1" value="Не разглашать информацию ограниченного доступа, к которой они допущены, в том числе сведения о криптоключах"> <label for="question7_1">Не разглашать информацию ограниченного доступа, к которой они допущены, в том числе сведения о криптоключах</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_2" value="Соблюдать требования к обеспечению с использованием СКЗИ безопасности информации ограниченного доступа"> <label for="question7_2">Соблюдать требования к обеспечению с использованием СКЗИ безопасности информации ограниченного доступа</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_3" value="Все ответы верны"> <label for="question7_3">Все ответы верны</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_4" value="Сохранять носители ключевой информации и другие документы о ключах, выдаваемых с ключевыми носителями"> <label for="question7_4">Сохранять носители ключевой информации и другие документы о ключах, выдаваемых с ключевыми носителями</label></div>
+                        </div>
+
+                    </div>
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №8 В информационных системах СКЗИ применяются:</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question8-Для установки защищенного подключения к ИС"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_1" value="Для установки защищенного подключения к ИС"> <label for="question8_1">Для установки защищенного подключения к ИС</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question8-Для шифрования файлов"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_2" value="Для шифрования файлов"> <label for="question8_2">Для шифрования файлов</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question8-Для организации электронного документооборота с применением ЭП"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_3" value="Для организации электронного документооборота с применением ЭП"> <label for="question8_3">Для организации электронного документооборота с применением ЭП</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question8-Все ответы верны"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_4" value="Все ответы верны"> <label for="question8_4">Все ответы верны</label></div>
                         </div>
                     </div>
 
-                </div>
-
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №2 В каком случае сертификат ключа проверки электронной подписи прекращает свое действие?</span>
-                    </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question2-В случае прекращения деятельности удостоверяющего центра без перехода его функций другим лицам"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_1" value="В случае прекращения деятельности удостоверяющего центра без перехода его функций другим лицам"> <label for="question2_1">В случае прекращения деятельности удостоверяющего центра без перехода его функций другим лицам</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question2-В связи с истечением установленного срока его действия"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_2" value="В связи с истечением установленного срока его действия"> <label for="question2_2">В связи с истечением установленного срока его действия</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question2-Все ответы верны"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_3" value="Все ответы верны"> <label for="question2_3">Все ответы верны</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question2-На основании заявления владельца сертификата ключа проверки электронной подписи, подаваемого в форме документа на бумажном носителе или в форме электронного документа"><input type="radio" class="qmn_quiz_radio" name="question2" id="question2_4" value="На основании заявления владельца сертификата ключа проверки электронной подписи, подаваемого в форме документа на бумажном носителе или в форме электронного документа">
-                            <label for="question2_4">На основании заявления владельца сертификата ключа проверки электронной подписи, подаваемого в форме документа на бумажном носителе или в форме электронного документа</label>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №9 Кто является пользователями СКЗИ?</span>
+                        </div>
+                        <div class="qmn_check_answers mlwRequiredCheck answr">
+                            <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_1" value="Все работники организации участвующие в электронном документообороте"> <label for="question9_1">Все работники организации участвующие в электронном документообороте</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_2" value="Работники организации, непосредственно допущенные к работе с СКЗИ, а также все работнику организации участвующие в электронном документообороте"> <label for="question9_2">Работники организации, непосредственно допущенные к работе с СКЗИ, а также все работники организации участвующие в электронном документообороте</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_3" value="Нет правильного ответа"> <label for="question9_3">Нет правильного ответа</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_4" value="Работники организации, непосредственно допущенные к работе с СКЗИ"> <label for="question9_4">Работники организации, непосредственно допущенные к работе с СКЗИ</label></div>
                         </div>
                     </div>
 
-                </div>
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №3 На время отсутствия пользователей СКЗИ должны:</span>
-                    </div>
-                    <div class="qmn_check_answers mlwRequiredCheck answr">
-                        <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_1" value="Быть очищены путём форматирования ключевых носителей и удалением программных средств"> <label for="question3_1">Быть очищены путём форматирования ключевых носителей и удалением программных средств</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_2" value="Нет правильного ответа"> <label for="question3_2">Нет правильного ответа</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_3" value="Быть не активны. Компьютер должен быть выключен, двери и окна в помещение с СКЗИ должны быть закрыты. Посторонние лица должны выйти из помещения."> <label for="question3_3">Быть не активны. Компьютер должен быть выключен, двери и окна в помещение с СКЗИ должны быть закрыты. Посторонние лица должны выйти из помещения.</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question3" id="question3_4" value="При наличии технической возможности быть выключены, отключены от линии связи и убраны в опечатываемые хранилища"> <label for="question3_4">При наличии технической возможности быть выключены, отключены от линии связи и убраны в опечатываемые хранилища</label></div>
-                    </div>
-
-                </div>
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №4 Какие действия необходимо провести с криптоключами, в отношении которых возникло подозрение в компрометации?</span>
-                    </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question4-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_1" value="Нет правильного ответа"> <label for="question4_1">Нет правильного ответа</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question4-Необходимо немедленно вывести из действия"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_2" value="Необходимо немедленно вывести из действия"> <label for="question4_2">Необходимо немедленно вывести из действия</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question4-Сообщить в соответствующий орган криптографической защиты"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_3" value="Сообщить в соответствующий орган криптографической защиты"> <label for="question4_3">Сообщить в соответствующий орган криптографической защиты</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question4-Необходимо сделать все перечисленные варианты"><input type="radio" class="qmn_quiz_radio" name="question4" id="question4_4" value="Необходимо сделать все перечисленные варианты"> <label for="question4_4">Необходимо сделать все перечисленные варианты</label></div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №10 Что подтверждает юридическую значимость электронной подписи в документе?</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question10-Договор оказания услуг"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_1" value="Договор оказания услуг"> <label for="question10_1">Договор оказания услуг</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question10-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_2" value="Нет правильного ответа"> <label for="question10_2">Нет правильного ответа</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question10-Сертификат ключа проверки электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_3" value="Сертификат ключа проверки электронной подписи"> <label for="question10_3">Сертификат ключа проверки электронной подписи</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question10-Открытый ключ проверки электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_4" value="Открытый ключ проверки электронной подписи"> <label for="question10_4">Открытый ключ проверки электронной подписи</label></div>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №5 Под компрометацией криптоключей понимается:</span>
-                    </div>
-                    <div class="qmn_check_answers mlwRequiredCheck answr">
-                        <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_1" value="Хищение, утрата, разглашение, а также несанкционированное копирование"> <label for="question5_1">Хищение, утрата, разглашение, а также несанкционированное копирование</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_2" value="Хищение, утрата, разглашение"> <label for="question5_2">Хищение, утрата, разглашение</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_3" value="Несанкционированное копирование"> <label for="question5_3">Несанкционированное копирование</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question5" id="question5_4" value="Нет правильного ответа"> <label for="question5_4">Нет правильного ответа</label></div>
-                    </div>
-
-                </div>
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №6 Что не допускается пользователю СКЗИ?</span>
-                    </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question6-Выводить ключевую информацию на дисплей и(или) принтер"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_1" value="Выводить ключевую информацию на дисплей и(или) принтер"> <label for="question6_1">Выводить ключевую информацию на дисплей и(или) принтер</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question6-Все ответы верны"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_2" value="Все ответы верны"> <label for="question6_2">Все ответы верны</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question6-Записывать на ключевом носителе постороннюю информацию"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_3" value="Записывать на ключевом носителе постороннюю информацию"> <label for="question6_3">Записывать на ключевом носителе постороннюю информацию</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question6-Разглашать информацию ограниченного доступа, к которой был допущен"><input type="radio" class="qmn_quiz_radio" name="question6" id="question6_4" value="Разглашать информацию ограниченного доступа, к которой был допущен"> <label for="question6_4" title="Взлом информации, зашифрованной 2048-битным ключом, на обычном компьютере занимает всего каких-то 300 трлн лет.&#013;Но квантовому компьютеру, работающему на 4099 кубитах, потребуется для этого 10 секунд">Разглашать информацию ограниченного доступа, к которой был допущен</label></div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №11 В соответствии с приказом ФАПСИ №152 от 13 июня 2001 г. непосредственно к работе с СКЗИ пользователи допускаются только после соответствующего обучения. Документом, подтверждающим должную специальную подготовку пользователей и возможность их допуска к самостоятельной работе с СКЗИ, является: </span>
+                        </div>
+                        <div class="qmn_check_answers mlwRequiredCheck answr">
+                            <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_1" value="Заявление на ЭП"> <label for="question11_1">Заявление на ЭП</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_2" value="Акт о готовности к эксплуатации СКЗИ"> <label for="question11_2">Акт о готовности к эксплуатации СКЗИ</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_3" value="Заключение о допуске ответственного лица к самостоятельной работе с СКЗИ"> <label for="question11_3">Заключение о допуске ответственного лица к самостоятельной работе с СКЗИ</label></div>
+                            <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_4" value="Нет правильного ответа"> <label for="question11_4">Нет правильного ответа</label></div>
+                        </div>
                     </div>
 
-                </div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №12 Администратор Удостоверяющего центра, выдавший сертификат ключа проверки электронной подписи, обязан аннулировать его: </span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question12-По заявлению в письменной форме владельца сертификата ключа проверки электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_1" value="По заявлению в письменной форме владельца сертификата ключа проверки электронной подписи"> <label for="question12_1">По заявлению в письменной форме владельца сертификата ключа проверки электронной подписи</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question12-Администратор Удостоверяющего центра не имеет права аннулировать сертификаты ЭП"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_2" value="Администратор Удостоверяющего центра не имеет права аннулировать сертификаты ЭП"> <label for="question12_2">Администратор Удостоверяющего центра не имеет права аннулировать сертификаты ЭП</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question12-По заявлению в письменной форме любого пользователя УЦ"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_3" value="По заявлению в письменной форме любого пользователя УЦ"> <label for="question12_3">По заявлению в письменной форме любого пользователя УЦ</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question12-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_4" value="Нет правильного ответа"> <label for="question12_4">Нет правильного ответа</label></div>
+                        </div>
+                    </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №7 Что относится к обязанностям пользователя СКЗИ?</span>
-                    </div>
-                    <div class="qmn_check_answers mlwRequiredCheck answr">
-                        <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_1" value="Не разглашать информацию ограниченного доступа, к которой они допущены, в том числе сведения о криптоключах"> <label for="question7_1">Не разглашать информацию ограниченного доступа, к которой они допущены, в том числе сведения о криптоключах</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_2" value="Соблюдать требования к обеспечению с использованием СКЗИ безопасности информации ограниченного доступа"> <label for="question7_2">Соблюдать требования к обеспечению с использованием СКЗИ безопасности информации ограниченного доступа</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_3" value="Все ответы верны"> <label for="question7_3">Все ответы верны</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question7" id="question7_4" value="Сохранять носители ключевой информации и другие документы о ключах, выдаваемых с ключевыми носителями"> <label for="question7_4">Сохранять носители ключевой информации и другие документы о ключах, выдаваемых с ключевыми носителями</label></div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №13 Владелец сертификата ключа подписи обязан:</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question13-Хранить в тайне открытый ключ электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_1" value="Хранить в тайне открытый ключ электронной подписи"> <label for="question13_1">Хранить в тайне открытый ключ электронной подписи</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question13-Хранить в тайне закрытый ключ электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_2" value="Хранить в тайне закрытый ключ электронной подписи"> <label for="question13_2">Хранить в тайне закрытый ключ электронной подписи</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question13-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_3" value="Нет правильного ответа"> <label for="question13_3">Нет правильного ответа</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question13-Хранить в тайне открытый и закрытый ключ электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_4" value="Хранить в тайне открытый и закрытый ключ электронной подписи"> <label for="question13_4">Хранить в тайне открытый и закрытый ключ электронной подписи</label></div>
+                        </div>
                     </div>
 
-                </div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №14 Кем осуществляется контроль за соблюдением правил пользования СКЗИ и условий их использования? </span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question14-Обладателем и пользователем(потребителем) защищаемой информации"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_1" value="Обладателем и пользователем(потребителем) защищаемой информации"> <label for="question14_1">Обладателем и пользователем(потребителем) защищаемой информации</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question14-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_2" value="Нет правильного ответа"> <label for="question14_2">Нет правильного ответа</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question14-ФСБ России"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_3" value="ФСБ России"> <label for="question14_3">ФСБ России</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question14-ФСБ России, обладателем и пользователем (потребителем) защищаемой информации"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_4" value="ФСБ России, обладателем и пользователем (потребителем) защищаемой информации"> <label for="question14_4">ФСБ России, обладателем и пользователем (потребителем) защищаемой информации</label></div>
+                        </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №8 В информационных системах СКЗИ применяются:</span>
                     </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question8-Для установки защищенного подключения к ИС"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_1" value="Для установки защищенного подключения к ИС"> <label for="question8_1">Для установки защищенного подключения к ИС</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question8-Для шифрования файлов"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_2" value="Для шифрования файлов"> <label for="question8_2">Для шифрования файлов</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question8-Для организации электронного документооборота с применением ЭП"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_3" value="Для организации электронного документооборота с применением ЭП"> <label for="question8_3">Для организации электронного документооборота с применением ЭП</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question8-Все ответы верны"><input type="radio" class="qmn_quiz_radio" name="question8" id="question8_4" value="Все ответы верны"> <label for="question8_4">Все ответы верны</label></div>
-                    </div>
-                </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №9 Кто является пользователями СКЗИ?</span>
-                    </div>
-                    <div class="qmn_check_answers mlwRequiredCheck answr">
-                        <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_1" value="Все работники организации участвующие в электронном документообороте"> <label for="question9_1">Все работники организации участвующие в электронном документообороте</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_2" value="Работники организации, непосредственно допущенные к работе с СКЗИ, а также все работнику организации участвующие в электронном документообороте"> <label for="question9_2">Работники организации, непосредственно допущенные к работе с СКЗИ, а также все работники организации участвующие в электронном документообороте</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_3" value="Нет правильного ответа"> <label for="question9_3">Нет правильного ответа</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question9" id="question9_4" value="Работники организации, непосредственно допущенные к работе с СКЗИ"> <label for="question9_4">Работники организации, непосредственно допущенные к работе с СКЗИ</label></div>
-                    </div>
-                </div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №15 Является ли увольнение работника, имеющего сертификат ЭП поводом для вывода из эксплуатации этой ЭП? </span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question15-Нет"><input type="radio" class="qmn_quiz_radio" name="question15" id="question15_1" value="Нет"> <label for="question15_1">Нет</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question15-Нет, если работнику в дальнейшем необходимо использовать сертификат в личных (неслужебных) целях"><input type="radio" class="qmn_quiz_radio" name="question15" id="question15_2" value="Нет, если работнику в дальнейшем необходимо использовать сертификат в личных (неслужебных) целях"> <label for="question15_2">Нет, если работнику в дальнейшем необходимо использовать сертификат в личных (неслужебных) целях</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question15-Да"><input type="radio" class="qmn_quiz_radio" name="question15" id="question15_3" value="Да"> <label for="question15_3">Да</label></div>
+                        </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №10 Что подтверждает юридическую значимость электронной подписи в документе?</span>
                     </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question10-Договор оказания услуг"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_1" value="Договор оказания услуг"> <label for="question10_1">Договор оказания услуг</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question10-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_2" value="Нет правильного ответа"> <label for="question10_2">Нет правильного ответа</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question10-Сертификат ключа проверки электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_3" value="Сертификат ключа проверки электронной подписи"> <label for="question10_3">Сертификат ключа проверки электронной подписи</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question10-Открытый ключ проверки электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question10" id="question10_4" value="Открытый ключ проверки электронной подписи"> <label for="question10_4">Открытый ключ проверки электронной подписи</label></div>
-                    </div>
-                </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №11 В соответствии с приказом ФАПСИ №152 от 13 июня 2001 г. непосредственно к работе с СКЗИ пользователи допускаются только после соответствующего обучения. Документом, подтверждающим должную специальную подготовку пользователей и возможность их допуска к самостоятельной работе с СКЗИ, является: </span>
-                    </div>
-                    <div class="qmn_check_answers mlwRequiredCheck answr">
-                        <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_1" value="Заявление на ЭП"> <label for="question11_1">Заявление на ЭП</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_2" value="Акт о готовности к эксплуатации СКЗИ"> <label for="question11_2">Акт о готовности к эксплуатации СКЗИ</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_3" value="Заключение о допуске ответственного лица к самостоятельной работе с СКЗИ"> <label for="question11_3">Заключение о допуске ответственного лица к самостоятельной работе с СКЗИ</label></div>
-                        <div class="qsm_check_answer"><input type="radio" name="question11" id="question11_4" value="Нет правильного ответа"> <label for="question11_4">Нет правильного ответа</label></div>
-                    </div>
-                </div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №16 Что необходимо сделать с выведенными из действия криптоключами? </span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question16-Скопировать"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_1" value="Скопировать"> <label for="question16_1">Скопировать</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question16-Уничтожить"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_2" value="Уничтожить"> <label for="question16_2">Уничтожить</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question16-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_3" value="Нет правильного ответа"> <label for="question16_3">Нет правильного ответа</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question16-Разгласить"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_4" value="Разгласить"> <label for="question16_4">Разгласить</label></div>
+                        </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №12 Администратор Удостоверяющего центра, выдавший сертификат ключа проверки электронной подписи, обязан аннулировать его: </span>
                     </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question12-По заявлению в письменной форме владельца сертификата ключа проверки электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_1" value="По заявлению в письменной форме владельца сертификата ключа проверки электронной подписи"> <label for="question12_1">По заявлению в письменной форме владельца сертификата ключа проверки электронной подписи</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question12-Администратор Удостоверяющего центра не имеет права аннулировать сертификаты ЭП"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_2" value="Администратор Удостоверяющего центра не имеет права аннулировать сертификаты ЭП"> <label for="question12_2">Администратор Удостоверяющего центра не имеет права аннулировать сертификаты ЭП</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question12-По заявлению в письменной форме любого пользователя УЦ"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_3" value="По заявлению в письменной форме любого пользователя УЦ"> <label for="question12_3">По заявлению в письменной форме любого пользователя УЦ</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question12-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question12" id="question12_4" value="Нет правильного ответа"> <label for="question12_4">Нет правильного ответа</label></div>
-                    </div>
-                </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №13 Владелец сертификата ключа подписи обязан:</span>
-                    </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question13-Хранить в тайне открытый ключ электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_1" value="Хранить в тайне открытый ключ электронной подписи"> <label for="question13_1">Хранить в тайне открытый ключ электронной подписи</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question13-Хранить в тайне закрытый ключ электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_2" value="Хранить в тайне закрытый ключ электронной подписи"> <label for="question13_2">Хранить в тайне закрытый ключ электронной подписи</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question13-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_3" value="Нет правильного ответа"> <label for="question13_3">Нет правильного ответа</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question13-Хранить в тайне открытый и закрытый ключ электронной подписи"><input type="radio" class="qmn_quiz_radio" name="question13" id="question13_4" value="Хранить в тайне открытый и закрытый ключ электронной подписи"> <label for="question13_4">Хранить в тайне открытый и закрытый ключ электронной подписи</label></div>
-                    </div>
-                </div>
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №17 Что такое электронная подпись по 63-ФЗ "Об электронной подписи"?</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question17-Информация в электронной форме, которая присоединена к другой информации в электронной форме (подписываемой информации) или иным образом связана с такой информацией и которая используется для определения лица, подписывающего информацию"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_1" value="Информация в электронной форме, которая присоединена к другой информации в электронной форме (подписываемой информации) или иным образом связана с такой информацией и которая используется для определения лица, подписывающего информацию">                                <label for="question17_1">Информация в электронной форме, которая присоединена к другой информации в электронной форме (подписываемой информации) или иным образом связана с такой информацией и которая используется для определения лица, подписывающего информацию</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question17-Cовокупность данных, обеспечивающая выбор одного конкретного криптографического преобразования из числа всех возможных в данной криптографической системе или системе, обеспечивающей необходимые требования федерального органа исполнительной власти, осуществляющего решение задач по обеспечению безопасности"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_2" value="Cовокупность данных, обеспечивающая выбор одного конкретного криптографического преобразования из числа всех возможных в данной криптографической системе или системе, обеспечивающей необходимые требования федерального органа исполнительной власти, осуществляющего решение задач по обеспечению безопасности">                                <label for="question17_2">Cовокупность данных, обеспечивающая выбор одного конкретного криптографического преобразования из числа всех возможных в данной криптографической системе или системе, обеспечивающей необходимые требования федерального органа исполнительной власти, осуществляющего решение задач по обеспечению безопасности</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question17-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_3" value="Нет правильного ответа"> <label for="question17_3">Нет правильного ответа</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question17-Cпециальным образом организованная совокупность криптоключей, предназначенная для осуществления криптографической защиты информации в течение определенного срока, а также предназначенная для шифрования и кодирования электронных данных"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_4" value="Cпециальным образом организованная совокупность криптоключей, предназначенная для осуществления криптографической защиты информации в течение определенного срока, а также предназначенная для шифрования и кодирования электронных данных">                                <label for="question17_4">Cпециальным образом организованная совокупность криптоключей, предназначенная для осуществления криптографической защиты информации в течение определенного срока, а также предназначенная для шифрования и кодирования электронных данных</label></div>
+                        </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №14 Кем осуществляется контроль за соблюдением правил пользования СКЗИ и условий их использования? </span>
                     </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question14-Обладателем и пользователем(потребителем) защищаемой информации"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_1" value="Обладателем и пользователем(потребителем) защищаемой информации"> <label for="question14_1">Обладателем и пользователем(потребителем) защищаемой информации</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question14-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_2" value="Нет правильного ответа"> <label for="question14_2">Нет правильного ответа</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question14-ФСБ России"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_3" value="ФСБ России"> <label for="question14_3">ФСБ России</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question14-ФСБ России, обладателем и пользователем (потребителем) защищаемой информации"><input type="radio" class="qmn_quiz_radio" name="question14" id="question14_4" value="ФСБ России, обладателем и пользователем (потребителем) защищаемой информации"> <label for="question14_4">ФСБ России, обладателем и пользователем (потребителем) защищаемой информации</label></div>
+
+                    <div class="wrap_center">
+                        <div class="quiz_section">
+                            <span class="mlw_qmn_question">Вопрос №18 Что следует сделать с носителем ключей электронной подписи (Рутокен) по окончанию рабочего дня?</span>
+                        </div>
+                        <div class="qmn_radio_answers mlwRequiredRadio answr">
+                            <div class="qmn_mc_answer_wrap" id="question18-В сейф"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_1" value="Убрать в сейф"> <label for="question18_1">Убрать в сейф</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question23-Спрятать согласно политике безопасности принятой в организации"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_2" value="Спрятать согласно политике безопасности принятой в организации"> <label for="question18_2">Спрятать согласно политике безопасности принятой в организации</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question18-Оставить воткнутым в компьютере"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_3" value="Оставить воткнутым в компьютере"> <label for="question18_3">Оставить воткнутым в компьютере</label></div>
+                            <div class="qmn_mc_answer_wrap" id="question18-Отформатировать"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_4" value="Отформатировать"> <label for="question18_4" title="В годы Второй Мировой Войны к любой шифровальной машине тактического назначения у шифровальщика был инструмент её уничтожения, как правило - взрывчатка.">Отформатировать</label></div>
+                        </div>
+
                     </div>
+
+
+                    <form name="sendUserData" method="POST" onsubmit="return empty_result()">
+                        <div><input name="fio" placeholder="Иванов Иван Иванович" required id="fio" type="hidden" style="width:300px"></div>
+                        <div><input name="org" placeholder="ФКУ «ГЦСиЗИ МВД России»" required id="org" type="hidden" style="width:300px"></div>
+                        <div><input name="email" placeholder="email@mvd.ru" required id="email" type="hidden" style="width:300px"></div>
+                        <div><input name="endresult" type="hidden" id="endResult"></div>
+                        <div><input name="timeResolve" type="hidden" id="timeResolve"></div>
+                        <div class="btnSection">
+                            <input type="submit" class="btn" onclick="result()" value="Отправить результат">
+                        </div>
+                    </form>
+
 
                 </div>
 
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №15 Является ли увольнение работника, имеющего сертификат ЭП поводом для вывода из эксплуатации этой ЭП? </span>
+                <div class="results">
+                    <div class="search">
+                        <input class="form-control" type="text" placeholder="Поиск" id="search-text" onkeyup="tableSearch()">
                     </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question15-Нет"><input type="radio" class="qmn_quiz_radio" name="question15" id="question15_1" value="Нет"> <label for="question15_1">Нет</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question15-Нет, если работнику в дальнейшем необходимо использовать сертификат в личных (неслужебных) целях"><input type="radio" class="qmn_quiz_radio" name="question15" id="question15_2" value="Нет, если работнику в дальнейшем необходимо использовать сертификат в личных (неслужебных) целях"> <label for="question15_2">Нет, если работнику в дальнейшем необходимо использовать сертификат в личных (неслужебных) целях</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question15-Да"><input type="radio" class="qmn_quiz_radio" name="question15" id="question15_3" value="Да"> <label for="question15_3">Да</label></div>
+                    <div class="usersResults">
                     </div>
-
                 </div>
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №16 Что необходимо сделать с выведенными из действия криптоключами? </span>
-                    </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question16-Скопировать"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_1" value="Скопировать"> <label for="question16_1">Скопировать</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question16-Уничтожить"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_2" value="Уничтожить"> <label for="question16_2">Уничтожить</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question16-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_3" value="Нет правильного ответа"> <label for="question16_3">Нет правильного ответа</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question16-Разгласить"><input type="radio" class="qmn_quiz_radio" name="question16" id="question16_4" value="Разгласить"> <label for="question16_4">Разгласить</label></div>
-                    </div>
-
-                </div>
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №17 Что такое электронная подпись по 63-ФЗ "Об электронной подписи"?</span>
-                    </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question17-Информация в электронной форме, которая присоединена к другой информации в электронной форме (подписываемой информации) или иным образом связана с такой информацией и которая используется для определения лица, подписывающего информацию"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_1" value="Информация в электронной форме, которая присоединена к другой информации в электронной форме (подписываемой информации) или иным образом связана с такой информацией и которая используется для определения лица, подписывающего информацию">                            <label for="question17_1">Информация в электронной форме, которая присоединена к другой информации в электронной форме (подписываемой информации) или иным образом связана с такой информацией и которая используется для определения лица, подписывающего информацию</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question17-Cовокупность данных, обеспечивающая выбор одного конкретного криптографического преобразования из числа всех возможных в данной криптографической системе или системе, обеспечивающей необходимые требования федерального органа исполнительной власти, осуществляющего решение задач по обеспечению безопасности"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_2" value="Cовокупность данных, обеспечивающая выбор одного конкретного криптографического преобразования из числа всех возможных в данной криптографической системе или системе, обеспечивающей необходимые требования федерального органа исполнительной власти, осуществляющего решение задач по обеспечению безопасности">                            <label for="question17_2">Cовокупность данных, обеспечивающая выбор одного конкретного криптографического преобразования из числа всех возможных в данной криптографической системе или системе, обеспечивающей необходимые требования федерального органа исполнительной власти, осуществляющего решение задач по обеспечению безопасности</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question17-Нет правильного ответа"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_3" value="Нет правильного ответа"> <label for="question17_3">Нет правильного ответа</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question17-Cпециальным образом организованная совокупность криптоключей, предназначенная для осуществления криптографической защиты информации в течение определенного срока, а также предназначенная для шифрования и кодирования электронных данных"><input type="radio" class="qmn_quiz_radio" name="question17" id="question17_4" value="Cпециальным образом организованная совокупность криптоключей, предназначенная для осуществления криптографической защиты информации в течение определенного срока, а также предназначенная для шифрования и кодирования электронных данных">                            <label for="question17_4">Cпециальным образом организованная совокупность криптоключей, предназначенная для осуществления криптографической защиты информации в течение определенного срока, а также предназначенная для шифрования и кодирования электронных данных</label></div>
-                    </div>
-
-                </div>
-
-                <div class="wrap_center">
-                    <div class="quiz_section">
-                        <span class="mlw_qmn_question">Вопрос №18 Что следует сделать с носителем ключей электронной подписи (Рутокен) по окончанию рабочего дня?</span>
-                    </div>
-                    <div class="qmn_radio_answers mlwRequiredRadio answr">
-                        <div class="qmn_mc_answer_wrap" id="question18-В сейф"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_1" value="Убрать в сейф"> <label for="question18_1">Убрать в сейф</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question23-Спрятать согласно политике безопасности принятой в организации"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_2" value="Спрятать согласно политике безопасности принятой в организации"> <label for="question18_2">Спрятать согласно политике безопасности принятой в организации</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question18-Оставить воткнутым в компьютере"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_3" value="Оставить воткнутым в компьютере"> <label for="question18_3">Оставить воткнутым в компьютере</label></div>
-                        <div class="qmn_mc_answer_wrap" id="question18-Отформатировать"><input type="radio" class="qmn_quiz_radio" name="question18" id="question18_4" value="Отформатировать"> <label for="question18_4" title="В годы Второй Мировой Войны к любой шифровальной машине тактического назначения у шифровальщика был инструмент её уничтожения, как правило - взрывчатка.">Отформатировать</label></div>
-                    </div>
-
-                </div>
-
-
-                <form name="sendUserData" method="POST" onsubmit="return empty_result()">
-                    <div><input name="fio" placeholder="Иванов Иван Иванович" required id="fio" type="hidden" style="width:300px"></div>
-                    <div><input name="org" placeholder="ФКУ «ГЦСиЗИ МВД России»" required id="org" type="hidden" style="width:300px"></div>
-                    <div><input name="email" placeholder="email@mvd.ru" required id="email" type="hidden" style="width:300px"></div>
-                    <div><input name="endresult" type="hidden" id="endResult"></div>
-                    <div><input name="timeResolve" type="hidden" id="timeResolve"></div>
-                    <div class="btnSection">
-                        <input type="submit" class="btn" onclick="result()" value="Отправить результат">
-                    </div>
-                </form>
-
-
-            </div>
-
-            <div class="results">
-                <div class="search">
-                    <input class="form-control" type="text" placeholder="Поиск" id="search-text" onkeyup="tableSearch()">
-                </div>
-                <div class="usersResults">
-                </div>
-            </div>
-
-
+            </section>
+            <footer>
+                2021 by PaleCrow
+            </footer>
         </div>
     </div>
 
