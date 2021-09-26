@@ -121,6 +121,7 @@ th.sorted[data-order="1"]::after {
     padding: 10px 10px;
     border-radius: 5px;
     color: #6B6B6B;
+    margin-bottom: 10px;
 }
 
 .docs {
@@ -213,4 +214,15 @@ th.sorted[data-order="1"]::after {
 
 .big {
     font-weight: bold;
+}
+
+.footer__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contacts svg:hover {
+    fill: #3498bd;
 }
