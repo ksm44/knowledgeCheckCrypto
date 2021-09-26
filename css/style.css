@@ -226,3 +226,13 @@ th.sorted[data-order="1"]::after {
 .contacts svg:hover {
     fill: #3498bd;
 }
+
+.loader {
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
+.search {
+    display: none;
+}

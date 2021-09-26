@@ -70,8 +70,6 @@ function startTest() {
     const r = document.getElementById('imgs');
     r.style.display = "none";
 
-
-
 }
 
 function addC() {
@@ -117,7 +115,11 @@ $(function() {
                 endresult: document.getElementById('endResult').value,
                 timeResolve: document.getElementById('timeResolve').value
             },
-            success: function(data) {},
+            success: function(data) {
+                document.getElementsByClassName('loader')[0].style.display = "none";
+                document.getElementsByClassName('search')[0].style.display = "inline-flex";
+                $.ajax().then(getData().then());
+            },
             error: function(jqXHR, exception) {
                 if (jqXHR.status === 0) {
                     console.log('Not connect. Verify Network.');
@@ -141,6 +143,8 @@ $(function() {
 })
 
 function result() {
+    document.getElementsByClassName('loader')[0].style.display = "inline-block";
+
     time2 = new Date();
     t2 = time2.getTime();
     timeResolve = Math.round((t2 - t1) / 1000);

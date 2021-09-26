@@ -47,7 +47,7 @@ async function getData() {
     }
 }
 
-getData().then();
+
 
 
 // Фильтрация (поиск)
