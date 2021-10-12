@@ -189,6 +189,13 @@ th.sorted[data-order="1"]::after {
     .form__line {
         flex-direction: column;
     }
+    table.sort {
+        font-size: 10px;
+    }
+    table.sort * {
+        padding: 0.1em 0.1em;
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 600px) {
@@ -209,6 +216,12 @@ th.sorted[data-order="1"]::after {
     }
     nav.navBlock li {
         max-width: 120px;
+    }
+    table.sort {
+        font-size: 8px;
+    }
+    table.sort td {
+        padding: 0.3em 0.3em;
     }
 }
 
